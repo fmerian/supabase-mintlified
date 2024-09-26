@@ -26,7 +26,7 @@
 
 `vecs` is a python client for managing and querying vector stores in PostgreSQL with the [pgvector extension](https://github.com/pgvector/pgvector). This guide will help you get started with using vecs.
 
-If you don't have a Postgres database with the pgvector ready, see [hosting](https://supabase.github.io/vecs/hosting/) for easy options.
+If you don't have a Postgres database with the pgvector ready, see [hosting](/hosting) for easy options.
 
 ## Installation
 
@@ -42,7 +42,7 @@ pip install vecs
 
 ## Usage
 
-Visit the [quickstart guide](https://supabase.github.io/vecs/latest/api) for more complete info.
+Visit the [quickstart guide](/api) for more complete info.
 
 ```python
 import vecs

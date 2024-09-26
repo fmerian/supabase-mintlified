@@ -1,91 +1,68 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+
+  "name": "supabase/vecs",
+
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/supabase-logo-wordmark--dark.svg",
+    "light": "/logo/supabase-logo-wordmark--light.svg"
   },
-  "favicon": "/favicon.svg",
+
+  "favicon": "/supabase-logo-icon.svg",
+
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
-    "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+    "primary": "#019A55",
+    "light": "#3ECF8E",
+    "dark": "#019A55",
+    "background": {
+      "light": "#FCFCFC",
+      "dark": "#121212"
     }
   },
-  "topbarLinks": [
-    {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
-    }
-  ],
+
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Sign up",
+    "style": "roundedRectangle",
+    "url": "https://supabase.com/dashboard",
+    "arrow": false
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
-  "anchors": [
-    {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
-    }
-  ],
+
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "GETTING STARTED",
+      "pages": ["introduction", "api", "hosting"]
+    },
+    {
+      "group": "CONCEPTS",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "concepts/adapters",
+        "concepts/collections",
+        "concepts/indexes",
+        "concepts/metadata"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "INTEGRATIONS",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "integrations/amazon_bedrock",
+        "integrations/huggingface_inference_endpoints",
+        "integrations/openai"
       ]
     },
     {
-      "group": "API Documentation",
-      "pages": [
-        "api-reference/introduction"
-      ]
-    },
-    {
-      "group": "Endpoint Examples",
-      "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
-      ]
+      "group": "SUPPORT",
+      "pages": ["support/changelog"]
     }
   ],
+
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true
+  },
+
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "github": "https://github.com/supabase",
+    "x": "https://x.com/supabase",
+    "discord": "https://discord.supabase.com/"
   }
 }
