@@ -1,85 +1,34 @@
-# vecs
-
-<p>
-    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.7+-blue.svg" alt="Python version" height="18"></a>
-    <a href="https://github.com/supabase/vecs/actions">
-        <img src="https://github.com/supabase/vecs/workflows/tests/badge.svg" alt="test status" height="18">
-    </a>
-    <a href="https://github.com/supabase/vecs/actions">
-        <img src="https://github.com/supabase/vecs/workflows/pre-commit/badge.svg" alt="Pre-commit Status" height="18">
-    </a>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/8291514/213727234-cda046d6-28c6-491a-b284-b86c5cede25d.png#gh-light-mode-only" >
+<img src="https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only" >
 </p>
 
-<p>
-    <a href="https://badge.fury.io/py/vecs"><img src="https://badge.fury.io/py/vecs.svg" alt="PyPI version" height="18"></a>
-    <a href="https://github.com/supabase/vecs/blob/master/LICENSE"><img src="https://img.shields.io/pypi/l/markdown-subtemplate.svg" alt="License" height="18"></a>
-    <a href="https://pypi.org/project/vecs/"><img src="https://img.shields.io/pypi/dm/vecs.svg" alt="Download count" height="18"></a>
-</p>
+# Supabase
 
----
+[Supabase](https://supabase.com) is an open source Firebase alternative. We're building the features of Firebase using enterprise-grade open source tools.
 
-**Documentation**: <a href="https://supabase.github.io/vecs/latest/" target="_blank">https://supabase.github.io/vecs/latest/</a>
+- [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)
+- [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)
+- [x] Auto-generated APIs.
+  - [x] REST. [Docs](https://supabase.com/docs/guides/api)
+  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/graphql)
+  - [x] Realtime subscriptions. [Docs](https://supabase.com/docs/guides/realtime)
+- [x] Functions.
+  - [x] Database Functions. [Docs](https://supabase.com/docs/guides/database/functions)
+  - [x] Edge Functions [Docs](https://supabase.com/docs/guides/functions)
+- [x] File Storage. [Docs](https://supabase.com/docs/guides/storage)
+- [x] AI + Vector/Embeddings Toolkit. [Docs](https://supabase.com/docs/guides/ai)
+- [x] Dashboard
 
-**Source Code**: <a href="https://github.com/supabase/vecs" target="_blank">https://github.com/supabase/vecs</a>
+## Documentation
 
----
+For full documentation, visit [supabase.com/docs](https://supabase.com/docs)
 
-`vecs` is a python client for managing and querying vector stores in PostgreSQL with the [pgvector extension](https://github.com/pgvector/pgvector). This guide will help you get started with using vecs.
+To see how to Contribute, visit [Getting Started](https://github.com/supabase/supabase/blob/master/DEVELOPERS.md)
 
-If you don't have a Postgres database with the pgvector ready, see [hosting](/hosting) for easy options.
+## Community & Support
 
-## Installation
-
-Requires:
-
-- Python 3.7+
-
-You can install vecs using pip:
-
-```sh
-pip install vecs
-```
-
-## Usage
-
-Visit the [quickstart guide](/api) for more complete info.
-
-```python
-import vecs
-
-DB_CONNECTION = "postgresql://<user>:<password>@<host>:<port>/<db_name>"
-
-# create vector store client
-vx = vecs.create_client(DB_CONNECTION)
-
-# create a collection of vectors with 3 dimensions
-docs = vx.get_or_create_collection(name="docs", dimension=3)
-
-# add records to the *docs* collection
-docs.upsert(
-    records=[
-        (
-         "vec0",           # the vector's identifier
-         [0.1, 0.2, 0.3],  # the vector. list or np.array
-         {"year": 1973}    # associated  metadata
-        ),
-        (
-         "vec1",
-         [0.7, 0.8, 0.9],
-         {"year": 2012}
-        )
-    ]
-)
-
-# index the collection for fast search performance
-docs.create_index()
-
-# query the collection filtering metadata for "year" = 2012
-docs.query(
-    data=[0.4,0.5,0.6],              # required
-    limit=1,                         # number of records to return
-    filters={"year": {"$eq": 2012}}, # metadata filters
-)
-
-# Returns: ["vec1"]
-```
+- [Community Forum](https://github.com/supabase/supabase/discussions). Best for: help with building, discussion about database best practices.
+- [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: bugs and errors you encounter using Supabase.
+- [Email Support](https://supabase.com/docs/support#business-support). Best for: problems with your database or infrastructure.
+- [Discord](https://discord.supabase.com). Best for: sharing your applications and hanging out with the community.
