@@ -32,3 +32,26 @@ To see how to Contribute, visit [Getting Started](https://github.com/supabase/su
 - [GitHub Issues](https://github.com/supabase/supabase/issues). Best for: bugs and errors you encounter using Supabase.
 - [Email Support](https://supabase.com/docs/support#business-support). Best for: problems with your database or infrastructure.
 - [Discord](https://discord.supabase.com). Best for: sharing your applications and hanging out with the community.
+
+## Development
+
+Install the [Mintlify CLI](https://www.npmjs.com/package/mintlify) to preview the documentation changes locally. To install, use the following command:
+
+```
+npm i -g mintlify
+```
+
+Run the following command at the root of your documentation (where `mint.json` is):
+
+```
+mintlify dev
+```
+
+## Publishing Changes
+
+Install the Github App to auto propagate changes from your repo to your deployment. Changes will be deployed to production automatically after pushing to the default branch. Find the link to install on your dashboard. 
+
+### Troubleshooting
+
+- Mintlify dev isn't running - Run `mintlify install` it will re-install dependencies.
+- Page loads as a 404 - Make sure you're running in a folder with `mint.json`.
