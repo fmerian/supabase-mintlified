@@ -1,8 +1,10 @@
-# Indexes
+---
+title: 'Indexes'
+---
 
-Indexes are tools for optimizing query performance of a [collection](concepts_collections.md).
+Indexes are tools for optimizing query performance of a [collection](/concepts/collections).
 
-Collections can be [queried](api.md/#query) without an index, but that will emit a python warning and should never be done in production.
+Collections can be [queried](/api#query) without an index, but that will emit a python warning and should never be done in production.
 
 ```text
 query does not have a covering index for cosine_similarity. See Collection.create_index
@@ -26,7 +28,6 @@ Available options for distance `measure` are:
 
 - `vecs.IndexMeasure.cosine_distance`
 - `vecs.IndexMeasure.l2_distance`
-- `vecs.IndexMeasure.l1_distance`
 - `vecs.IndexMeasure.max_inner_product`
 
 which correspond to different methods for comparing query vectors to the vectors in the database.
@@ -57,7 +58,7 @@ docs.create_index(
 )
 ```
 
-!!! note
-    The time required to create an index grows with the number of records and size of vectors.
-    For a few thousand records expect sub-minute a response in under a minute. It may take a few
-    minutes for larger collections.
+<Info>
+  The time required to create an index grows with the number of records and size of vectors.
+  For a few thousand records expect sub-minute a response in under a minute. It may take a few minutes for larger collections.
+</Info>

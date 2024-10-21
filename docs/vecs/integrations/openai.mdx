@@ -1,4 +1,7 @@
-# Integration: Open AI
+---
+title: 'OpenAI'
+version: 'vecs'
+---
 
 This guide will walk you through an example integration of the OpenAI API with the vecs Python library. We will create embeddings using OpenAI's `text-embedding-ada-002` model, insert these embeddings into a PostgreSQL database using vecs, and then query vecs to find the most similar sentences to a given query sentence.
 
@@ -15,7 +18,7 @@ pip install vecs openai
 You'll also need:
 
 - [An OpenAI API Key](https://platform.openai.com/account/api-keys)
-- [A Postgres Database with the pgvector extension](hosting.md)
+- [A Postgres Database with the pgvector extension](/vecs/hosting)
 
 ## Create Embeddings
 

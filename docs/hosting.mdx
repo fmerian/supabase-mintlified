@@ -1,7 +1,8 @@
-# Deployment
+---
+title: Deployment
+---
 
-
-`vecs` is comatible with any Postgres 13+ with the [pgvector](https://github.com/pgvector/pgvector) extension installed.
+`vecs` is compatible with any Postgres 13+ with the [pgvector](https://github.com/pgvector/pgvector) extension installed.
 
 In the following we show we show instructions for hosting a database on Supabase and locally in docker since both are fast and free.
 
@@ -14,23 +15,23 @@ In the following we show we show instructions for hosting a database on Supabase
 
 Create a supabase account at [https://app.supabase.com/sign-up](https://app.supabase.com/sign-up).
 
-![sign up](./assets/supabase_sign_up.png)
+![sign up](/images/supabase_sign_up.png)
 
 #### Create a new project
 
 Select `New Project`
 
-![new_project_promp](./assets/supabase_new_project_prompt.png)
+![new_project_promp](/images/supabase_new_project_prompt.png)
 
 Complete the prompts. Be sure to remember or write down your password as we'll need that when connecting with vecs.
 
-![new_project](./assets/supabase_new_project.png)
+![new_project](/images/supabase_new_project.png)
 
 #### Connection Info
 
 On the project page, navigate to `Settings` > `Database` > `Database Settings`
 
-![connection_info](./assets/supabase_connection_info.png)
+![connection_info](/images/supabase_connection_info.png)
 
 and substitue those fields into the conenction string
 
@@ -42,7 +43,7 @@ i.e.
 postgres://postgres:[YOUR PASSWORD]@db.cvykdyhlwwwojivopztl.supabase.co:5432/postgres
 ```
 
-Keep that connection string secret and safe. Its your `DB_CONNECTION` in the [quickstart guide](api.md),
+Keep that connection string secret and safe. Its your `DB_CONNECTION` in the [quickstart guide](/api),
 
 
 ### Local
@@ -53,40 +54,39 @@ You can also use Supabase locally on your machine. Doing so will keep your proje
 
 To install the CLI, use the relevant system instructions below
 
-=== "macOS"
-
+<Tabs>
+  <Tab title="macOS">
     ```sh
     brew install supabase/tap/supabase
     ```
-
-=== "Windows"
-
+  </Tab>
+  <Tab title="Windows">
     ```sh
     scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
     scoop install supabase
     ```
+    </Tab>
+    <Tab title="Linux">
+      Linux packages are provided in Releases. To install, download the .apk/.deb/.rpm file depending on your package manager and run one of the following:
 
-=== "Linux"
-
-    Linux packages are provided in Releases. To install, download the .apk/.deb/.rpm file depending on your package manager and run one of the following:
-
-    ```sh
-    sudo apk add --allow-untrusted <...>.apk
-    ```
-    or
-    ```sh
-    sudo dpkg -i <...>.deb
-    ```
-    or
-    ```sh
-    sudo rpm -i <...>.rpm
-    ```
-
-=== "npm"
-
+      ```sh
+      sudo apk add --allow-untrusted <...>.apk
+      ```
+      or
+      ```sh
+      sudo dpkg -i <...>.deb
+      ```
+      or
+      ```sh
+      sudo rpm -i <...>.rpm
+      ```
+    </Tab>
+  <Tab title="npm">
     ```shell
     npm install supabase --save-dev
     ```
+  </Tab>
+</Tabs>
 
 ### Start the Project
 
@@ -155,4 +155,4 @@ i.e.
 postgresql://postgres:password@localhost:5019/vecs_db
 ```
 
-Keep that connection string secret and safe. Its your `DB_CONNECTION` in the [quickstart guide](api.md)
+Keep that connection string secret and safe. Its your `DB_CONNECTION` in the [quickstart guide](/api)

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+
+  "name": "supabase docs",
+
+  "logo": {
+    "dark": "/logo/supabase-logo-wordmark--dark.svg",
+    "light": "/logo/supabase-logo-wordmark--light.svg"
+  },
+
+  "favicon": "/supabase-logo-icon.svg",
+
+  "colors": {
+    "primary": "#019A55",
+    "light": "#3ECF8E",
+    "dark": "#019A55",
+    "background": {
+      "light": "#FCFCFC",
+      "dark": "#121212"
+    }
+  },
+
+  "versions": ["vecs", "auth"],
+
+  "topbarCtaButton": {
+    "name": "Sign up",
+    "style": "roundedRectangle",
+    "url": "https://supabase.com/dashboard",
+    "arrow": false
+  },
+
+  "navigation": [
+    {
+      "group": "GETTING STARTED",
+      "version": "vecs",
+      "pages": ["introduction", "vecs/api", "vecs/hosting"]
+    },
+    {
+      "group": "CONCEPTS",
+      "version": "vecs",
+      "pages": [
+        "vecs/concepts/adapters",
+        "vecs/concepts/collections",
+        "vecs/concepts/indexes",
+        "vecs/concepts/metadata"
+      ]
+    },
+    {
+      "group": "INTEGRATIONS",
+      "version": "vecs",
+      "pages": [
+        "vecs/integrations/amazon_bedrock",
+        "vecs/integrations/huggingface_inference_endpoints",
+        "vecs/integrations/openai"
+      ]
+    },
+    {
+      "group": "SUPPORT",
+      "version": "vecs",
+      "pages": ["vecs/support/changelog"]
+    },
+    {
+      "group": "GETTING STARTED",
+      "version": "auth",
+      "pages": ["introduction"]
+    }
+  ],
+
+  "feedback": {
+    "thumbsRating": true,
+    "suggestEdit": true,
+    "raiseIssue": true
+  },
+
+  "footerSocials": {
+    "github": "https://github.com/supabase",
+    "x": "https://x.com/supabase",
+    "discord": "https://discord.supabase.com/"
+  }
+}

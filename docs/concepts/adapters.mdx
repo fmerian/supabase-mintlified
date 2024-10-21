@@ -1,4 +1,6 @@
-# Adapters
+---
+title: 'Adapters'
+---
 
 Adapters are an optional feature to transform data before adding to or querying from a collection. Adapters provide a customizable and modular way to express data transformations and make interacting with collections more ergonomic.
 
@@ -127,6 +129,3 @@ Adapters are objects that take in data in the form of `Iterable[Tuple[str, Any, 
 The main use of Adapters is to transform the media part of the records into a form that is ready to be ingested into the collection (like converting text into embeddings). However, Adapters can also modify the `id` or `metadata` if required.
 
 Due to the common interface, adapters may be comprised of multiple adapter steps to create multi-stage preprocessing pipelines. For example, a multi-step adapter might first convert text into chunks and then convert each text chunk into an embedding vector.
-
-
-
