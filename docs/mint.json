@@ -31,12 +31,12 @@
 
   "navigation": [
     {
-      "group": "GETTING STARTED",
+      "group": "Getting Started",
       "version": "vecs",
       "pages": ["introduction", "vecs/api", "vecs/hosting"]
     },
     {
-      "group": "CONCEPTS",
+      "group": "Concepts",
       "version": "vecs",
       "pages": [
         "vecs/concepts/adapters",
@@ -46,7 +46,7 @@
       ]
     },
     {
-      "group": "INTEGRATIONS",
+      "group": "Integrations",
       "version": "vecs",
       "pages": [
         "vecs/integrations/amazon_bedrock",
@@ -55,14 +55,19 @@
       ]
     },
     {
-      "group": "SUPPORT",
+      "group": "Support",
       "version": "vecs",
       "pages": ["vecs/support/changelog"]
     },
     {
-      "group": "GETTING STARTED",
+      "group": "Documentation",
       "version": "auth",
-      "pages": ["introduction"]
+      "pages": [
+        "auth/introduction",
+        "auth/quickstart",
+        "auth/production",
+        "auth/configuration"
+      ]
     }
   ],
 
